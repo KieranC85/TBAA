@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= yield(:title) %> | Customer Care </title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  
+  <body>
+    
+    
+      <header class="headSec">
+      <h1> Food About Town </h1>
+      
+       <ul class="tabs">
+        
+        <li><%= link_to "Home",  " / " %></li>
+        
+        <li><%= link_to "Customers", "/customers" %></li>
+        <li><%= link_to "Cases", "/cases" %></li>
+        
+      </ul>
+      
+      
+    </header>
+
+    <div class="container">
+      
+    <%= yield %>
+    </div>
+
+<footer class="foot">
+<h1>Im the Footer</h1>
+</footer>
+
+  </body>
+</html>
